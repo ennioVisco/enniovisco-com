@@ -9,7 +9,10 @@
     "preview": "nuxi preview"
   },
   "devDependencies": {
+    "@nuxt-themes/alpine": "^1.5.0",
     "nuxt": "^3.2.3",
-    "@nuxt-themes/alpine": "^1.5.0"
+    "sass": "^1.59.3"
+  },
+  "dependencies": {
   }
 }

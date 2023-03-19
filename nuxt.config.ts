@@ -1,3 +1,4 @@
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/alpine'
+  extends: '@nuxt-themes/alpine',
+  css: ["@/assets/main.css"],
 })
