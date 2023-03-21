@@ -1,3 +1,8 @@
 .logo img {
     width: 200px !important;
 }
+
+.hero .right {
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+}
