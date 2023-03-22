@@ -6,3 +6,16 @@
     border-radius: 50% !important;
     aspect-ratio: 1 / 1 !important;
 }
+
+:where(a, button):focus-visible {
+    outline: 1px dotted black;
+    background-color: #fff70033;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :where(a, button):focus-visible {
+        outline: 1px dotted white;  
+        background-color: #fff70067;
+    }
+}

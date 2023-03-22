@@ -12,7 +12,7 @@ type DBLP = {
         }]}
     }
 }
-const {data: dblp} = await useFetch<DBLP>('https://dblp.org/search/publ/api?q=author%3AEnnio_Visconti%3A&format=json', 
+const {data: dblp, pending} = await useLazyFetch<DBLP>('https://dblp.org/search/publ/api?q=author%3AEnnio_Visconti%3A&format=json', 
 { pick: ['result'] })
 
 const papers = computed(() => dblp.value?.result.hits.hit)
@@ -20,21 +20,26 @@ const papers = computed(() => dblp.value?.result.hits.hit)
 
 <template>
     <ul class="papers">
-        <li v-for="paper in papers" :key="paper.info.url" class="link">
-            <a :href="paper.info.url">
-                <Icon name="mdi:link-variant" />
-                <strong>{{ paper.info.title }}</strong>&nbsp;
-                <span>{{  paper.info.venue }}'{{ paper.info.year }}</span>
-                <ol class="authors">
-                    <li v-for="author in paper.info.authors.author">
-                        <em v-if="author.text === 'Ennio Visconti'">
-                            {{ author.text }}
-                        </em>
-                        <template v-else>{{ author.text }}</template>
-                    </li>
-                </ol>
-            </a>
-        </li>
+        <template v-if="!pending">
+            <li v-for="paper in papers" :key="paper.info.url" class="item">
+                <a :href="paper.info.url" class="link">
+                    <Icon name="mdi:link-variant" />
+                    <strong>{{ paper.info.title }}</strong>&nbsp;
+                    <span>{{  paper.info.venue }}'{{ paper.info.year }}</span>
+                    <ol class="authors">
+                        <li v-for="author in paper.info.authors.author">
+                            <em v-if="author.text === 'Ennio Visconti'">
+                                {{ author.text }}
+                            </em>
+                            <template v-else>{{ author.text }}</template>
+                        </li>
+                    </ol>
+                </a>
+            </li>
+        </template>
+        <template v-else>
+            <li>Loading...</li>
+        </template>
     </ul>
 </template>
 
@@ -52,16 +57,24 @@ const papers = computed(() => dblp.value?.result.hits.hit)
 .papers {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
-.link:hover, .link:focus {
+.link {
+    display: block;
+    padding-inline: 0.5rem;
+    padding-block: 0.75rem;
+}
+
+.link:focus, .link:hover {
+    outline: 1px dotted black;
     background-color: #fff70033;
-    /* outline: 1px solid gold; */
 }
 
-.link:hover > a, .link:focus > a {
-    text-decoration: underline dotted;
+@media (prefers-color-scheme: dark) {
+    .link:hover, .link:focus {
+        outline: 1px dotted white;  
+        background-color: #fff70067;
+    }
 }
 
 .authors em {
