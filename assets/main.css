@@ -12,10 +12,31 @@
     background-color: #fff70033;
 }
 
-@media (prefers-color-scheme: dark) {
+.fyblo {
+    background: url(~/assets/fyblo_positive.svg) no-repeat center center;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    background-size: cover;
+    top: -0.6rem;
+    border: none !important;
+}
 
+
+
+span:has(> .fyblo) {
+    position: relative;
+}
+
+
+@media (prefers-color-scheme: dark) {
     :where(a, button):focus-visible {
         outline: 1px dotted white;  
         background-color: #fff70067;
+    }
+
+    .fyblo {
+        background: url(~/assets/fyblo_negative.svg) no-repeat center center;
     }
 }
