@@ -10,15 +10,15 @@ const { data: commits } = await useLazyFetch<Commit[]>('https://api.github.com/r
 const lastCommit = computed(() => {
     if(commits.value) {
         const date = new Date(commits.value[0].commit.author.date)
-        return date.toLocaleDateString()
+        return date
     } else {
-        return 'Loading...'
+        return new Date()
     }
 })
 </script>
 
 <template>
-    <span class="update">Last updated: {{ lastCommit }}</span>
+    <span class="update">Last updated: {{ lastCommit.toLocaleDateString() }}</span>
 </template>
 
 <style scoped>

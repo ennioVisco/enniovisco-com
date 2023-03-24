@@ -38,12 +38,55 @@ const papers = computed(() => dblp.value?.result.hits.hit)
             </li>
         </template>
         <template v-else>
-            <li>Loading...</li>
+            <li class="placeholder" v-for="i in 6" :key="i">
+                <div class="animated-background" :data-line="i"></div>
+            </li>
         </template>
     </ul>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+
+@mixin animated($i) {
+    .animated-background[data-line="#{$i}"] {
+        animation-name: placeHolderShimmer#{$i};
+    }
+    @keyframes placeHolderShimmer#{$i}{
+        $offset: 50% * $i;
+        0%{
+            background-position: calc(-150% + $offset) 0
+        }
+        100%{
+            background-position: calc(700% + $offset) 0
+        }
+    }
+}
+
+@for $i from 1 through 6 {
+    @include animated($i);
+}
+
+.placeholder {
+    background-color: #eee;
+    height: 3rem;
+    margin-block: 0.75rem;
+}
+
+.animated-background {
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: darkgray;
+    background: linear-gradient(to right, #eeeeee 10%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 100%;
+    position: relative;
+}
+
+
+
 .authors {
     display: flex;
     flex-direction: row;
