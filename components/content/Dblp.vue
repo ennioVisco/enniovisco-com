@@ -22,7 +22,7 @@ const papers = computed(() => dblp.value?.result.hits.hit)
     <ul class="papers">
         <template v-if="!pending">
             <li v-for="paper in papers" :key="paper.info.url" class="item">
-                <a :href="paper.info.url" class="link">
+                <a :href="paper.info.url" class="link" target="_blank">
                     <Icon name="mdi:link-variant" />
                     <strong>{{ paper.info.title }}</strong>&nbsp;
                     <span>{{  paper.info.venue }}'{{ paper.info.year }}</span>
