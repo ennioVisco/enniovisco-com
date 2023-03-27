@@ -27,6 +27,7 @@
 
 span:has(> .fyblo) {
     position: relative;
+    width: 100%;
 }
 
 
