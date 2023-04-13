@@ -12,6 +12,6 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/**': {swr: true},
+    '/**': {swr: 60 * 60},
   }
 })
