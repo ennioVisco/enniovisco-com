@@ -10,9 +10,8 @@
   },
   "devDependencies": {
     "@nuxt-themes/alpine": "^1.5.0",
-    "nuxt": "^3.2.3",
-    "sass": "^1.59.3"
-  },
-  "dependencies": {
+    "consola": "^3.0.1",
+    "nuxt": "^3.4.0",
+    "sass": "^1.62.0"
   }
 }

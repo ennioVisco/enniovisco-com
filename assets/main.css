@@ -23,6 +23,15 @@
     border: none !important;
 }
 
+.inline-logo {
+    position: relative;
+    top: -0.2rem;
+}
+
+.projects-grid {
+    padding-bottom: 2rem !important;
+}
+
 
 
 span:has(> .fyblo) {
