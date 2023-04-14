@@ -12,6 +12,7 @@
     "@nuxt-themes/alpine": "^1.5.0",
     "consola": "^3.0.1",
     "nuxt": "^3.4.0",
+    "nuxt-seo-kit": "^1.3.6",
     "sass": "^1.62.0"
   }
 }
