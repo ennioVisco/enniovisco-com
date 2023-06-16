@@ -18,7 +18,11 @@ const lastCommit = computed(() => {
 </script>
 
 <template>
-    <span class="update">Last updated: {{ lastCommit.toLocaleDateString() }}</span>
+    <ClientOnly>
+        <span class="update">
+            Last updated: {{ lastCommit.toLocaleDateString() }}
+        </span>
+    </ClientOnly>
 </template>
 
 <style scoped>

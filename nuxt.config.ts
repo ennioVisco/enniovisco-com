@@ -3,17 +3,28 @@ export default defineNuxtConfig({
     '@nuxt-themes/alpine',
     'nuxt-seo-kit'
   ],
+
   css: ["@/assets/main.css"],
+
+  // devtools: true,
+  // modules: [
+  //   '@nuxt/devtools',
+  // ],
+  // debug: true,
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://enniovisco.com',
+      siteUrl: 'https://enniovisco.com',
       siteName: 'Ennio Visconti',
       siteDescription: 'Welcome to my personal website!',
       language: 'en',
     }
   },
- 
+
+  routeRules: {
+    '/**': {prerender: true},
+  },
+
   app: {
     head: {
       charset: 'utf-8',
@@ -23,8 +34,4 @@ export default defineNuxtConfig({
       },
     }
   },
-
-  routeRules: {
-    '/**': {prerender: true},
-  }
 })
