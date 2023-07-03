@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    'cv': { redirect: 'https://enniovisco.github.io/CV/main.pdf'},
     '/**': {prerender: true},
   },
 
