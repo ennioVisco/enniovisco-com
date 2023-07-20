@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   css: ["@/assets/main.css"],
 
   // devtools: true,
-  // modules: [
-  //   '@nuxt/devtools',
-  // ],
+  modules: [
+    '@nuxthq/studio',
+  ],
   // debug: true,
 
   runtimeConfig: {
