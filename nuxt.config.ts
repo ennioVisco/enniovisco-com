@@ -1,24 +1,21 @@
 export default defineNuxtConfig({
-  extends: [
-    '@nuxt-themes/alpine',
-    'nuxt-seo-kit'
-  ],
+  extends: [ '@nuxt-themes/alpine' ],
 
   css: ["@/assets/main.css"],
 
   // devtools: true,
   modules: [
     '@nuxthq/studio',
+    '@nuxtseo/module',
+    // 'pinceau/nuxt'
   ],
   // debug: true,
 
-  runtimeConfig: {
-    public: {
-      siteUrl: 'https://enniovisco.com',
-      siteName: 'Ennio Visconti',
-      siteDescription: 'Welcome to my personal website!',
-      language: 'en',
-    }
+  site: {
+    url: 'https://enniovisco.com',
+    name: 'Ennio Visconti',
+    description: 'Welcome to my personal website!',
+    language: 'en',
   },
 
   routeRules: {
