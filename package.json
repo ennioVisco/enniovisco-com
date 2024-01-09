@@ -13,11 +13,11 @@
   },
   "packageManager": "pnpm@8.8.0",
   "devDependencies": {
-    "@nuxt-themes/alpine": "^1.6.4",
+    "@nuxt-themes/alpine": "^1.6.5",
     "@nuxt/devtools": "^1.0.0-beta.0",
-    "@nuxthq/studio": "^1.0.3",
+    "@nuxthq/studio": "^1.0.6",
     "@nuxtseo/module": "2.0.0-beta.15",
-    "nuxt": "^3.8.1",
+    "nuxt": "^3.9.1",
     "sass": "^1.69.0"
   },
   "dependencies": {
