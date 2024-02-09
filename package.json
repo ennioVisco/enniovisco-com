@@ -14,13 +14,13 @@
   "packageManager": "pnpm@8.8.0",
   "devDependencies": {
     "@nuxt-themes/alpine": "^1.6.5",
-    "@nuxt/devtools": "^1.0.0-beta.0",
-    "@nuxthq/studio": "^1.0.6",
-    "@nuxtseo/module": "2.0.0-beta.15",
-    "nuxt": "^3.9.1",
-    "sass": "^1.69.0"
+    "@nuxt/devtools": "^1.0.8",
+    "@nuxthq/studio": "^1.0.10",
+    "@nuxtseo/module": "2.0.0-beta.55",
+    "nuxt": "^3.10.1",
+    "sass": "^1.70.0"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.0"
+    "@vercel/analytics": "^1.1.3"
   }
 }
