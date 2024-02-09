@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   // devtools: true,
   modules: [
     '@nuxthq/studio',
-    '@nuxtseo/module',
+    '@nuxtjs/seo',
     // 'pinceau/nuxt'
   ],
   // debug: true,
