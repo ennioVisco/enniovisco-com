@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare": "pnpm exec playwright install-deps",
+    "prepare": "npx playwright install && npx playwright install-deps chromium",
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
@@ -19,8 +19,6 @@
     "@nuxthq/studio": "^1.0.11",
     "@nuxtjs/seo": "2.0.0-rc.8",
     "nuxt": "^3.10.3",
-    "playwright": "^1.41.2",
-    "playwright-chromium": "^1.41.2",
     "sass": "^1.71.1"
   },
   "dependencies": {
