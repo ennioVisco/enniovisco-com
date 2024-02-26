@@ -16,11 +16,22 @@ export default defineNuxtConfig({
     name: 'Ennio Visconti',
     description: 'Welcome to my personal website!',
     language: 'en',
+    trailingSlash: true
+  },
+
+  sitemap: {
+    enabled: false,
   },
 
   routeRules: {
     'cv': { redirect: 'https://enniovisco.github.io/CV/main.pdf'},
     '/**': {prerender: true},
+  },
+
+  vite: {
+    build: {
+      sourcemap: true,
+    }
   },
 
   app: {
