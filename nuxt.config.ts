@@ -3,7 +3,8 @@ export default defineNuxtConfig({
 
   css: ["@/assets/main.css"],
 
-  // devtools: true,
+  devtools: true,
+
   modules: [
     '@nuxthq/studio',
     '@nuxtjs/seo',
@@ -18,8 +19,10 @@ export default defineNuxtConfig({
     defaultLocale: 'en'
   },
 
-  sitemap: {
-    enabled: true,
+ ogImage: {
+    componentOptions: {
+      global: true,
+    }
   },
 
   nitro: {
