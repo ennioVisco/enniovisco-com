@@ -22,6 +22,11 @@ export default defineNuxtConfig({
  ogImage: {
     componentOptions: {
       global: true,
+    },
+    compatibility: {
+      prerender: {
+        chromium: false
+      }
     }
   },
 
