@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prepare": "npx playwright install && npx playwright install-deps chromium",
+    "postinstall": "pnpm dlx playwright install --with-deps chromium",
     "dev": "nuxi dev",
     "build": "nuxi build",
     "generate": "nuxi generate",
