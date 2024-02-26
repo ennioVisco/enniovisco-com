@@ -19,7 +19,13 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    enabled: false,
+    enabled: true,
+  },
+
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
   },
 
   routeRules: {
@@ -29,13 +35,7 @@ export default defineNuxtConfig({
         statusCode: 302
       }
     },
-    // '/': {prerender: true},
-  },
-
-  vite: {
-    build: {
-      sourcemap: true,
-    }
+    '/': {prerender: true},
   },
 
   app: {
