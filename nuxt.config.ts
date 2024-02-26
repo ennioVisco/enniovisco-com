@@ -23,12 +23,12 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    // cv: { 
-    //   redirect: { 
-    //     to: 'https://enniovisco.github.io/CV/main.pdf',
-    //     statusCode: 302
-    //   }
-    // },
+    "/cv": { 
+      redirect: { 
+        to: 'https://enniovisco.github.io/CV/main.pdf',
+        statusCode: 302
+      }
+    },
     '/': {prerender: true},
   },
 
