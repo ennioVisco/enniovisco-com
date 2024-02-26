@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         statusCode: 302
       }
     },
-    '/': {prerender: true},
+    // '/': {prerender: true},
   },
 
   vite: {
