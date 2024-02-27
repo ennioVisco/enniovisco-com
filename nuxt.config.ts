@@ -30,11 +30,11 @@ export default defineNuxtConfig({
     // }
   },
 
-  // nitro: {
-  //   prerender: {
-  //     routes: ['/sitemap.xml']
-  //   }
-  // },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
 
   routeRules: {
     "/cv": { 
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
         statusCode: 302
       }
     },
-    // '/': {prerender: true},
+    '/': {prerender: true},
   },
 
   app: {
