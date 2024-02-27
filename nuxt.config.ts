@@ -23,18 +23,18 @@ export default defineNuxtConfig({
     componentOptions: {
       global: true,
     },
-    compatibility: {
-      prerender: {
-        chromium: false
-      }
-    }
+    // compatibility: {
+    //   prerender: {
+    //     chromium: false
+    //   }
+    // }
   },
 
-  nitro: {
-    prerender: {
-      routes: ['/sitemap.xml']
-    }
-  },
+  // nitro: {
+  //   prerender: {
+  //     routes: ['/sitemap.xml']
+  //   }
+  // },
 
   routeRules: {
     "/cv": { 
@@ -43,7 +43,7 @@ export default defineNuxtConfig({
         statusCode: 302
       }
     },
-    '/': {prerender: true},
+    // '/': {prerender: true},
   },
 
   app: {
