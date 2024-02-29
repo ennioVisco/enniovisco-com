@@ -1,9 +1,23 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
+
 export default defineNuxtConfig({
   extends: [ '@nuxt-themes/alpine' ],
 
   css: ["@/assets/main.css"],
 
-  devtools: true,
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
+
+  typescript: {
+    typeCheck: false,
+    strict: true,
+  },
 
   modules: [
     '@nuxthq/studio',
@@ -17,6 +31,13 @@ export default defineNuxtConfig({
     name: 'Ennio Visconti',
     description: 'Welcome to my personal website!',
     defaultLocale: 'en'
+  },
+
+  experimental: {
+    payloadExtraction: true,
+    typedPages: true, // since 3.6.2
+    headNext: true, // since 3.7.0
+    viewTransition: true,
   },
 
  ogImage: {
