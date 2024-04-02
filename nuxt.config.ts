@@ -22,9 +22,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxthq/studio',
     '@nuxtjs/seo',
-    // 'pinceau/nuxt'
   ],
-  // debug: true,
 
   site: {
     url: 'https://enniovisco.com',
@@ -51,11 +49,6 @@ export default defineNuxtConfig({
     // }
   },
 
-  // nitro: {
-  //   prerender: {
-  //     routes: ['/sitemap.xml']
-  //   }
-  // },
 
   routeRules: {
     "/cv": { 
